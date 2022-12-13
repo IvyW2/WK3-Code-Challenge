@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
     fetchMovies();
   });
   
-  const BASE_URL = `http://localhost:3000/`
+  const BASE_URL = `https://api.npoint.io/3e60251e8c5103d91884/films/`
 
   const fetchMovies = () => {
-    fetch(BASE_URL + "films")
+    fetch(BASE_URL)
       .then((resp) => resp.json())
       .then(populateMovieList);
   }
